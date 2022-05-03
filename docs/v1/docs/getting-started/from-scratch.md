@@ -144,7 +144,7 @@ For detailed lifecycle explanation, check [Basics • Lifecycle](/basics/lifecyc
 			resp, _ := http.Get("http://httpbin.org/uuid")
 	        data := map[string]string{}
 	        json.NewDecoder(resp.Body).Decode(&data)
-	        c.State.Set("UUID", data["uuid"])
+	        core.State.Set("UUID", data["uuid"])
 	        return nil
 		})
 	}
